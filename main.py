@@ -32,8 +32,8 @@ def analysis(df: pd.DataFrame):
     plt.xlabel("# Clusters")
     plt.ylabel("Inertia")
     plt.title(f"Elbow - {df.columns[0]} vs {df.columns[1]}")
-    plt.show()
     plt.savefig(f"images/elbow-{df.columns[0]}-vs-{df.columns[1]}")
+    plt.show()
 
 
 def clusters_get(df: pd.DataFrame, k: int):
@@ -66,8 +66,8 @@ def draw_results(dataframes: List[pd.DataFrame]):
         axes[i].set_ylabel([target[1]])
 
     plt.tight_layout()
-    plt.show()
     plt.savefig("images/clusters.png")
+    plt.show()
 
 
 df = pd.read_csv("files/Country-data.xls")
@@ -85,7 +85,7 @@ for i, target in enumerate(targets):
     cluster = clusters_get(cast(pd.DataFrame, partial), 5)
     dataframes.append(pd.concat([partial, cluster], axis=1))
 
-# analysis(dataframes[0]) #optimal between 4 and 6
-# analysis(dataframes[1]) #optimal between 4 and 6
+analysis(dataframes[0]) #optimal between 4 and 6
+analysis(dataframes[1]) #optimal between 4 and 6
 
 draw_results(dataframes)
