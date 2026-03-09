@@ -2,12 +2,12 @@
 
 ## Elbow: Child Mortality vs GDPP
 
-![](images/elbow-child_mort-vs-gdpp.png)
+![child-mort](images/elbow-child_mort-vs-gdpp.png)
 
 ## Elbow: Life Expectancy vs GDPP
 
-![](images/elbow-life_expec-vs-gdpp.png)
+![life-expec](images/elbow-life_expec-vs-gdpp.png)
 
 ## Kmeans 
 
-![](images/clusters.png)
+![clusters](images/clusters.png)
